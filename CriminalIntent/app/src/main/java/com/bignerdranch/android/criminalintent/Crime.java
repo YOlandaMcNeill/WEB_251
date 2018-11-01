@@ -19,6 +19,18 @@ public class Crime {
         return mId;
     }
 
+    public void setId(UUID mId) {
+        this.mId = mId;
+    }
+
+    public void setTitle(String mTitle) {
+        this.mTitle = mTitle;
+    }
+
+    public void setDate(Date mDate) {
+        this.mDate = mDate;
+    }
+
     public String getTitle() {
         return mTitle;
     }
