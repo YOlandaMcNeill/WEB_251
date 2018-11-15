@@ -2,6 +2,8 @@ package com.bignerdranch.android.criminalintent;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -9,7 +11,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.List;
-import com.android.support.v7.
+//import com.android.support.v7.
 //import android.support.v7.app.AlertController;
 
 public class CrimeListFragment extends Fragment {
@@ -40,7 +42,7 @@ public class CrimeListFragment extends Fragment {
     }
 
     private class CrimeHolder extends RecyclerView.ViewHolder
-            implements View.onClickListener {
+            implements View.OnClickListener {
 
         private Crime mCrime;
 
@@ -54,11 +56,13 @@ public class CrimeListFragment extends Fragment {
             mTitleTextView = (TextView) itemView.findViewById(R.id.crime_title);
             mDateTextView = (TextView) itemView.findViewById(R.id.crime_date);
 
-            public void bind(Crime crime){
-                mCrime = crime;
-                mTitleTextView.setText(mCrime.getTitle());
-                mDateTextView.setText(mCrime.getDate().toString());
-            }
+
+        }
+
+        public void bind(Crime crime){
+            mCrime = crime;
+            mTitleTextView.setText(mCrime.getTitle());
+            mDateTextView.setText(mCrime.getDate().toString());
         }
 
         @Override
